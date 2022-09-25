@@ -1,0 +1,119 @@
+/*!
+	Timeline JS 3 
+	
+	Designed and built by Zach Wise for the Northwestern University Knight Lab
+	
+	This Source Code Form is subject to the terms of the Mozilla Public
+	License, v. 2.0. If a copy of the MPL was not distributed with this
+	file, You can obtain one at https://mozilla.org/MPL/2.0/.
+
+*/
+
+// STUDIOATAO
+
+/* Includes 
+================================================== */
+@import "Variables.less"; 					// Variables (easy way to make style changes) 
+
+//@import "../../TL.Timeline.Base.less"; 	// Base Less File
+
+/*	Font Lustria & Lato
+
+https://www.google.com/fonts/specimen/Lustria
+https://www.google.com/fonts/specimen/Lato
+----------------------------------------------------- */
+
+
+// Font Import
+@import url(https://fonts.googleapis.com/css?family=Lustria|Lato:400,400italic);
+
+// Font Variables
+@font-main:						'Lato', sans-serif;
+@font-secondary:				'Lustria', serif;
+@font-navigation:				@font-main;
+@font-marker: 					@font-secondary;
+@font-headline-date: 			@font-navigation;
+
+@base-font-size: 				17px;
+@base-font-weight: 				400;
+
+// Blockquote
+@font-blockquote: 				@font-main;
+@font-blockquote-weight: 		400;
+@font-blockquote-style: 		italic;
+
+// Headings
+@font-size-headings: 			46px;
+@font-headings-lineheight: 		@font-size-headings;
+@font-headings-text-transform: 	none;
+@font-size-headings-small: 		24px;
+@font-headings-weight: 			400;
+@font-size-headline-title: 		58px;
+
+// Marker
+@font-marker-text-transform: 	@font-headings-text-transform;
+
+// Navigation
+@font-navigation-text-transform: 	none;
+ 
+@import "../../fonts/_font.base.less";
+
+
+
+// StudioATAO colors
+@charcoal: #2C3335;
+@warm-gray: #AFAEAC;
+@canvas: #F7F3ED;
+@white: #FFFFFF;
+@dark-terracotta: #D0886D;
+@light-terracotta: #F1C2A4;
+@ice-blue: #CCE9F2;
+@marine: #38495E;
+@sea-green: #609B99;
+
+
+.tl-timeline {
+	.tl-headline-date, h3.tl-headline-date {
+		margin-bottom:10px !important;
+	}
+}
+
+
+.tl-timegroup:nth-child(5) {
+	background-color: @canvas;
+}
+.tl-timegroup:nth-child(6) {
+	background-color: @light-terracotta;
+}
+.tl-timegroup:nth-child(7) {
+	background-color: @ice-blue;
+}
+.tl-timegroup:nth-child(8) {
+	background-color: @marine;
+}
+.tl-timegroup:nth-child(9) {
+	background-color: @sea-green;
+}
+
+.tl-timegroup .tl-timegroup-message {
+	text-shadow: none;
+	color: @warm-gray;
+}
+
+.tl-timemarker .tl-timemarker-content-container {
+	background-color: @canvas;
+	border-color: @warm-gray;
+	box-shadow: 1px 1px 1px darken(@warm-gray, 15%);
+}
+
+.tl-timemarker .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text h2.tl-headline, .tl-timemarker .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text h2.tl-headline p {
+	color: @charcoal;
+}
+
+.tl-timeera .tl-timeera-background {
+	background-color: @canvas !important;
+}
+
+.tl-timeera .tl-timeera-content-container .tl-timeera-content .tl-timeera-text h2.tl-headline {
+	color: @charcoal;
+}
